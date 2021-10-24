@@ -1,0 +1,109 @@
+:root {
+    --esc-frame-width: 25px;
+    --esc-frame-width-secondary: 40px;
+}
+
+.frame {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:
+        var(--esc-frame-width)
+        var(--esc-frame-width-secondary)
+        1fr
+        var(--esc-frame-width-secondary)
+        var(--esc-frame-width);
+    grid-template-rows:
+        var(--esc-frame-width)
+        var(--esc-frame-width-secondary)
+        1fr
+        var(--esc-frame-width-secondary)
+        var(--esc-frame-width);
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.frame__top {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.75em;
+    letter-spacing: 0.075rem;
+
+    span {
+        // margin-top: 3px;
+    }
+}
+
+.frame__bottom {
+    grid-row: 5/6;
+    grid-column: 2/5;
+    background: white;
+}
+
+.frame__left {
+    grid-row: 3/5;
+    grid-column: 1/2;
+    background: white;
+}
+
+.frame__right {
+    grid-row: 3/5;
+    grid-column: 5/6;
+    background: white;
+}
+
+.frame__topleft {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    background: white;
+    pointer-events: all;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        .button--trickstar {
+            fill: var(---esc-accent-1);
+        }
+    }
+}
+
+body.fine {
+    .button--trickstar {
+        fill: transparent;
+    }
+
+    .button--fine {
+        fill: var(---esc-accent-1);
+    }
+}
+
+.frame__topright {
+    grid-row: 1/3;
+    grid-column: 4/6;
+    background: white;
+}
+
+.frame__bottomleft {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    background: white;
+}
+
+.frame__bottomright {
+    grid-row: 5/6;
+    grid-column: 5/6;
+    background: white;
+}

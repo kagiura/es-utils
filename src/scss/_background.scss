@@ -1,0 +1,48 @@
+.background__wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+    transition: transform 1s cubic-bezier(1, 0, 0, 1);
+    margin: auto;
+
+    * {
+        transition: stop-color 1s cubic-bezier(1, 0, 0, 1);
+    }
+}
+
+.background {
+    width: 100vw;
+    height: auto;
+}
+
+.stop-accent-1 {
+    stop-color: var(---esc-accent-1);
+}
+
+.stop-accent-2 {
+    stop-color: var(---esc-accent-2);
+}
+
+.stop-accent-3 {
+    stop-color: var(---esc-accent-3);
+}
+
+.stop-accent-4 {
+    stop-color: var(---esc-accent-4);
+}
+
+.stop-accent-5 {
+    stop-color: var(---esc-accent-5);
+}
+
+.stop-accent-6 {
+    stop-color: var(---esc-accent-6);
+}
+
+.stop-accent-7 {
+    stop-color: var(---esc-accent-7);
+}

@@ -1,0 +1,75 @@
+@use "background";
+@use "frame";
+
+@mixin centerContent {
+    max-width: 500px;
+    margin: auto;
+}
+
+:root {
+    ---esc-accent-1: #e95105;
+    ---esc-accent-2: #15429a;
+    ---esc-accent-3: #e92005;
+    ---esc-accent-4: #f39800;
+    ---esc-accent-5: #e4026b;
+    ---esc-accent-6: #733b89;
+    ---esc-accent-7: #7c93bf;
+
+    font: normal normal normal 16px/1.5 "Overpass", sans-serif, sans-serif;
+}
+
+body {
+    background: var(---esc-accent-1);
+
+    .background__wrapper {
+        transform: translateX(-15px);
+    }
+}
+
+body.fine {
+    ---esc-accent-1: #ffe991;
+    ---esc-accent-2: #6ccae3;
+    ---esc-accent-3: #fabe01;
+    ---esc-accent-4: #fabe01;
+    ---esc-accent-5: #92d8e9;
+    ---esc-accent-6: #ee94b4;
+    ---esc-accent-7: #e8eaa7;
+
+    .background__wrapper {
+        transform: translateX(15px);
+    }
+}
+
+.content {
+    margin: 20vh 0;
+
+    section.title {
+        @include centerContent;
+
+        h1,
+        h2 {
+            margin: 0;
+            line-height: 1;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 0.075rem;
+
+            span {
+                background: black;
+                color: white;
+                padding: 0.2rem 0.75rem;
+                display: inline-block;
+            }
+        }
+
+        h2 {
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 36px;
+        }
+    }
+}
